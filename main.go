@@ -15,12 +15,6 @@ import (
 	git "github.com/go-git/go-git/v5"
 )
 
-const (
-	GitLabURL   = "https://your.gitlab.domain"
-	AccessToken = "yourgitlabuseraccesstoken"
-	TargetDir   = "downloaded_repos"
-)
-
 type Project struct {
 	ID                int       `json:"id"`
 	Name              string    `json:"name"`
@@ -250,4 +244,3 @@ func saveVariables(projectPath string, variables []Variable, variableType string
 		fmt.Println("Error writing variables to file:", err)
 	}
 }
-
